@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 90px;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.1);
+  transition: all 1s linear;
+}
+
+.navbar-container {
+  overflow: hidden;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-container .logo .logo-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-container .logo h1 {
+  font-size: 36px;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar-container ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-container ul li {
+  margin-right: 10px;
+}
+
+.navbar-container ul li .nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 131px;
+  height: 76;
+}
+
+.navbar-container ul li .nav-link .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  transition: all 1s linear;
+}
+
+.navbar-container ul li .nav-link i {
+  font-size: 10px;
+}
+
+.navbar-container ul li .nav-link .circle::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 100%;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transform: translateX(100%);
+  transform: translateY(-50%);
+}
+
+.navbar-container ul li .nav-link .circle::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #fff;
+  right: 99%;
+}
+
+.navbar-container ul li .nav-link:hover .circle:before,
+.navbar-container ul li .nav-link:hover .circle:after {
+  animation: animate 1s forwards linear;
+}
+
+.navbar-container:hover ul li .nav-link .circle {
+  transition: all 10s linear;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50px;
+  }
+  100% {
+    width: 50px;
+  }
+  0% {
+    width: 0;
+  }
+}
+/* 
+@keyframes animateText {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+} */
